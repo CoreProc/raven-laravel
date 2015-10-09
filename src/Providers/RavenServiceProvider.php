@@ -19,6 +19,26 @@ class RavenServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->bootstrapRaven();
+
+        $this->publish();
+    }
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        // Nothing to register
+    }
+
+    /**
+     * Bootstraps Raven and Monolog together
+     */
+    private function bootstrapRaven()
+    {
         $sentryEnabled = Config::get('sentry.enabled', false);
         $sentryDsn = Config::get('sentry.dsn', null);
 
@@ -32,13 +52,11 @@ class RavenServiceProvider extends ServiceProvider
         }
     }
 
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
+    private function publish()
     {
-        //
+        // Publishes the configuration file
+        $this->publishes([
+            __DIR__ . '/../../config/sentry.php' => config_path('sentry.php')
+        ]);
     }
 }
