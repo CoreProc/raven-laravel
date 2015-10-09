@@ -7,6 +7,11 @@
         "illuminate/support": "5.1.*",
         "monolog/monolog": "~1.11"
     },
+    "autoload": {
+        "psr-4": {
+            "Coreproc\\RavenLaravel\\": "src/"
+        }
+    },
     "license": "MIT",
     "authors": [
         {
