@@ -19,9 +19,9 @@ class RavenServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->bootstrapRaven();
-
         $this->publish();
+
+        $this->bootstrapRaven();
     }
 
     /**
@@ -39,11 +39,11 @@ class RavenServiceProvider extends ServiceProvider
      */
     private function bootstrapRaven()
     {
-        $sentryEnabled = Config::get('sentry.enabled', false);
-        $sentryDsn = Config::get('sentry.dsn', null);
+        $sentryEnabled = config('sentry.enabled', false);
+        $sentryDsn = config('sentry.dsn', null);
 
-        if ($sentryEnabled === true && $sentryDsn !== null) {
-            $client = new Raven_Client();
+        if ($sentryEnabled === true && ! empty($sentryDsn)) {
+            $client = new Raven_Client($sentryDsn);
             $handler = new RavenHandler($client);
             $handler->setFormatter(new LineFormatter("%message% %context% %extra%\n"));
 
