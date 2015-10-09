@@ -40,9 +40,10 @@ class RavenServiceProvider extends ServiceProvider
     {
         $sentryEnabled = config('sentry.enabled', false);
         $sentryDsn = config('sentry.dsn', null);
+        $sentryOptions = config('sentry.options', []);
 
         if ($sentryEnabled === true && ! empty($sentryDsn)) {
-            $client = new Raven_Client($sentryDsn);
+            $client = new Raven_Client($sentryDsn, $sentryOptions);
             $handler = new RavenHandler($client);
             $handler->setFormatter(new LineFormatter("%message% %context% %extra%\n"));
 
