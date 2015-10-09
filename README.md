@@ -4,31 +4,44 @@ A Laravel 5.1 library that easily integrates raven-php to centralize your logs u
 
 ## Install
 
-Via Composer
+Go to the root of your Laravel 5.1 project and run the following command:
 
 ``` bash
-$ composer require coreproc/raven-laravel
+composer require coreproc/raven-laravel
 ```
 
-## Usage
+Then in your `config/app.php` add the `RavenServiceProvider` to your `providers` array
 
-``` php
+```php
+'providers' => array(
 
+    ...
+    Coreproc\RavenLaravel\Providers\RavenServiceProvider::class,
+),
 ```
 
-## Change log
+Back on your terminal, run the following command to publish the `sentry.php` config file:
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+``` bash
+php artisan vendor:publish
+```
+
+Edit your `config/sentry.php` file and enable Sentry logging by setting `enabled` to true and plugging in your DSN from your Sentry project.
+
+```php
+'enabled' => true,
+
+'dsn'     => 'https://***:***@sentry.yourdomain.com/{project}'
+```
 
 ## Testing
 
+To test if your Sentry application is correctly grabbing your logs, simply launch `php artisan tinker` and execute a sample log like so:
+
 ``` bash
-$ composer test
+$ php artisan tinker
+>>> Log::error("This is a test error. Sentry should get this.");
 ```
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
