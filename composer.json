@@ -2,6 +2,8 @@
     "name": "coreproc/raven-laravel",
     "description": "A Laravel 5.1 library that easily integrates raven-php to centralize your logs using Sentry",
     "type": "library",
+    "keywords": ["raven", "raven-php", "sentry", "centralized", "logging", "laravel"],
+    "homepage": "https://github.com/CoreProc/raven-laravel",
     "require": {
         "raven/raven": "0.13.*",
         "illuminate/support": "5.1.*",
@@ -16,7 +18,7 @@
     "authors": [
         {
             "name": "Chris Bautista",
-            "email": "chris.bautista@coreproc.ph"
+            "email": "chrisbjr@gmail.com"
         }
     ],
     "minimum-stability": "dev"
