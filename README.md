@@ -7,14 +7,13 @@ A Laravel 5.1 library that easily integrates raven-php to centralize your logs u
 Via Composer
 
 ``` bash
-$ composer require kryo/raven-laravel
+$ composer require coreproc/raven-laravel
 ```
 
 ## Usage
 
 ``` php
-$skeleton = new Coreproc\RavenLaravel();
-echo $skeleton->echoPhrase('Hello, League!');
+
 ```
 
 ## Change log
