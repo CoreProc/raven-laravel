@@ -50,6 +50,7 @@ If you discover any security related issues, please email chris.bautista@corepro
 ## Credits
 
 - [Chris Bautista](https://github.com/chrisbjr)
+- [Clarke Plumo](https://github.com/arkeidolon)
 - [All Contributors](../../contributors)
 
 ## License

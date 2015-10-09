@@ -19,6 +19,10 @@
         {
             "name": "Chris Bautista",
             "email": "chrisbjr@gmail.com"
+        },
+        {
+            "name": "Clarke Plumo",
+            "email": "clarke.plumo@gmail.com"
         }
     ],
     "minimum-stability": "dev"
