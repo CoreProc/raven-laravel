@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\RavenHandler;
 use Raven_Client;
-use Config;
 use Log;
 
 class RavenServiceProvider extends ServiceProvider
