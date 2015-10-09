@@ -3,46 +3,46 @@
 return [
 
     /*
-	|--------------------------------------------------------------------------
-	| Sentry switch
-	|--------------------------------------------------------------------------
-	|
-	| Set the following value to true to enable logging via Sentry. Of course,
+    |--------------------------------------------------------------------------
+    | Sentry switch
+    |--------------------------------------------------------------------------
+    |
+    | Set the following value to true to enable logging via Sentry. Of course,
     | you'll have to set your DSN as well. Usually, we put the followig switch
     | along with the environment variables. Like so:
     |
     | 'enabled' => env('SENTRY_ENABLED', false)
-	|
-	*/
+    |
+    */
 
     'enabled' => false,
 
     /*
-	|--------------------------------------------------------------------------
-	| DSN
-	|--------------------------------------------------------------------------
-	|
-	| In your Sentry dashboard, create a new project and grab your DSN from the
+    |--------------------------------------------------------------------------
+    | DSN
+    |--------------------------------------------------------------------------
+    |
+    | In your Sentry dashboard, create a new project and grab your DSN from the
     | settings. Usually, this can be found under Settings -> Client Keys
     |
     | The format of the DSN is usally like this:
     | http://public:secret@example.com/1
-	|
-	*/
+    |
+    */
 
     'dsn'     => '',
 
     /*
-	|--------------------------------------------------------------------------
-	| Options
-	|--------------------------------------------------------------------------
-	|
-	| You can add Raven options as an array through this variable. A list of
+    |--------------------------------------------------------------------------
+    | Options
+    |--------------------------------------------------------------------------
+    |
+    | You can add Raven options as an array through this variable. A list of
     | available options can be found here:
     |
     | https://github.com/getsentry/raven-php#configuration
-	|
-	*/
+    |
+    */
 
     'options' => [
 
