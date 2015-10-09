@@ -1,10 +1,10 @@
-# Raven for Laravel 5
+# Raven for Laravel 5.1
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Total Downloads][ico-downloads]][link-downloads]
 
-A Laravel 5 library that easily integrates [raven-php](https://github.com/getsentry/raven-php) to centralize your logs using [Sentry](https://getsentry.com/).
+A Laravel 5.1 library that easily integrates [raven-php](https://github.com/getsentry/raven-php) to centralize your logs using [Sentry](https://getsentry.com/).
 
 ## Install
 
@@ -37,6 +37,14 @@ Edit your `config/sentry.php` file and enable Sentry logging by setting `enabled
 
 'dsn'     => 'https://***:***@sentry.yourdomain.com/{project}'
 ```
+
+## Configuration
+
+You can configure Raven through the `config/sentry.php` config file. All the available options are already in there together with their default values.
+
+You can find more details about the available options in Raven using this link:
+
+[https://github.com/getsentry/raven-php#configuration](https://github.com/getsentry/raven-php#configuration)
 
 ## Testing
 
