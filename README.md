@@ -1,6 +1,6 @@
 # Raven for Laravel
 
-A Laravel 5.1 library that easily integrates raven-php to centralize your logs using Sentry.
+A Laravel 5.1 library that easily integrates [raven-php](https://github.com/getsentry/raven-php) to centralize your logs using [Sentry](https://getsentry.com/).
 
 ## Install
 
